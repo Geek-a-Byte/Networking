@@ -51,6 +51,8 @@ The physical layer in System B receives the information unit and passes it to th
 | Session and presentation layers are not a part of the TCP model. | There is no session and presentation layer in TCP model.     |
 | The minimum size of the OSI header is 5 bytes.               | Minimum header size is 20 bytes.                             |
 
+![osi vs tcp2](https://user-images.githubusercontent.com/59027621/148687936-b96520f5-c5d1-4729-bb54-b5b3c619dfa1.png)
+![osi vs tcp](https://user-images.githubusercontent.com/59027621/148687939-e3599300-dec2-4a3e-bbc3-ff2148354b78.png)
 
 
 
