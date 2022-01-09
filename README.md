@@ -129,6 +129,7 @@ Cellular telephony is designed to provide communications between two moving unit
 - Better if all adjacent antennas equidistant
 - Simplifies choosing and switching to new antenna
 
+![square](https://user-images.githubusercontent.com/59027621/148688099-754a4a14-03f2-4654-8013-d83dfc0722ec.png)
 
 #### Hexagon
 - Provides equidistant antennas
@@ -140,6 +141,7 @@ Cellular telephony is designed to provide communications between two moving unit
 - Local signal propagation conditions
 - Location of antennas
 
+![hexagonal](https://user-images.githubusercontent.com/59027621/148688104-f2a1eedf-6574-4d39-b099-7fd19738e917.png)
 
 
 
