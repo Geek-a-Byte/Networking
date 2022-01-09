@@ -52,7 +52,7 @@ The physical layer in System B receives the information unit and passes it to th
 | The minimum size of the OSI header is 5 bytes.               | Minimum header size is 20 bytes.                             |
 
 ![osi vs tcp2](https://user-images.githubusercontent.com/59027621/148687936-b96520f5-c5d1-4729-bb54-b5b3c619dfa1.png)
-![osi vs tcp](https://user-images.githubusercontent.com/59027621/148687939-e3599300-dec2-4a3e-bbc3-ff2148354b78.png)
+
 
 
 
@@ -88,128 +88,41 @@ Lcrsd
 
 ![service primitives](https://user-images.githubusercontent.com/59027621/148687797-1bcb2115-adbc-4701-ab34-b218798591ee.jpg)
 
-
+![all layers](https://user-images.githubusercontent.com/59027621/148687958-92935135-abbb-4524-8bd0-fe0fdf8ab789.jpg)
 
 
 
 Twisted pairs are made up of two insulated copper wires that are twisted together. The twisting is done to help cancel exterior electromagnetic interference. Crosstalk interference can come from other pairs within a cable
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-MOBILE NETWORK
-
-Cellular telephony is designed to provide 
-communications between 
-two moving units, called mobile stations (MSs), or
-one mobile unit and one stationary unit, often called a land unit. 
-
-Why Wireless is needed?
-Mobile communications is needed
-Terrain makes wired communication difficult
-Communications must be set up quickly
-Communications must be installed at low cost
-Same information must be broadcast to many locations
-
-Disadvantages of Wireless?
-More susceptible to 
- interference, 
- noise, 
- signal loss, 
- eavesdropping
-Generally lower data rate than wired
-Frequencies interfere in close proximity
-Less connection stability
-
-Cellular Network Organization
-
-Multiple low power transmitters (100w or less)
-Area divided into cells
-Each with own antenna
-Each with own range of frequencies
-Served by base station
-Transmitter, receiver, control unit
-Adjacent cells on different frequencies to avoid crosstalk
-
-
-
-
-Shape of Cells
+# MOBILE NETWORK
+
+Cellular telephony is designed to provide communications between two moving units, called mobile stations (MSs), or one mobile unit and one stationary unit, often called a land unit. 
+
+## Why Wireless is needed?
+- Mobile communications is needed
+- Terrain makes wired communication difficult
+- Communications must be set up quickly
+- Communications must be installed at low cost
+- Same information must be broadcast to many locations
+
+## Disadvantages of Wireless?
+- More susceptible to interference, noise, signal loss, eavesdropping
+- Generally lower data rate than wired
+- Frequencies interfere in close proximity
+- Less connection stability
+
+## Cellular Network Organization
+
+- Multiple low power transmitters (100w or less)
+- Area divided into cells
+- Each with own antenna
+- Each with own range of frequencies
+- Served by base station
+- Transmitter, receiver, control unit
+- Adjacent cells on different frequencies to avoid crosstalk
+
+## Shape of Cells
 
 #### Square
 - Width d cell has four neighbors at distance d and four at distance  root(2)*d
@@ -217,29 +130,15 @@ Shape of Cells
 - Simplifies choosing and switching to new antenna
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Hexagon
-Provides equidistant antennas
-Radius defined as radius of circum-circle(jeita oi hexagon er shob vertex ke touch kore ekta circle)
-Distance from center to vertex equals length of side (polygon er ekta side er length)
-Distance between centers of cells radius R is root(3)* R (calc yourself)
-Not always precise hexagons
-Topographical limitations
-Local signal propagation conditions
-Location of antennas
+#### Hexagon
+- Provides equidistant antennas
+- Radius defined as radius of circum-circle(jeita oi hexagon er shob vertex ke touch kore ekta circle)
+- Distance from center to vertex equals length of side (polygon er ekta side er length)
+- Distance between centers of cells radius R is root(3)* R (calc yourself)
+- Not always precise hexagons
+- Topographical limitations
+- Local signal propagation conditions
+- Location of antennas
 
 
 
