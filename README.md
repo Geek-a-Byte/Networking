@@ -69,14 +69,36 @@ The physical layer in System B receives the information unit and passes it to th
 ![hrllo](https://user-images.githubusercontent.com/59027621/148687707-0633dcac-0847-4a80-90b4-c90172055dc3.jpg)
 
 
+> A part of an internet with \two routers connecting three LANs. 
+> Each device (computer or router) has a pair of addresses (logical and physical) for each connection. 
+> In this case, each computer is connected to only one link and therefore has only one pair of addresses. 
+> Each router, however, is connected to three networks (only two are shown in the figure). So each router has three pairs of addresses, one for each connection. 
 
-Example (2) The Figure shows a part of an internet with two routers connecting three LANs. Each device (computer or router) has a pair of addresses (logical and physical) for each connection. In this case, each computer is connected to only one link and therefore has only one pair of addresses. Each router, however, is connected to three networks (only two are shown in the figure). So each router has three pairs of addresses, one for each connection. Although it may be obvious that each router must have a separate physical address for each connection, it may. The computer with logical address A and physical address 10 needs to send a packet to the computer with logical address P and physical address 95. The sender encapsulates its data in a packet at the network layer and adds two logical addresses (A and P). The network layer, however, needs to find the physical address of the next hop before the packet can be delivered. The network layer consults its routing table and finds the logical address of the next hop (router 1) to be F. Another protocol, Address Resolution Protocol (ARP) finds the physical address of router 1 (20) that corresponds to its logical address. Now the network layer passes this address to the data link layer, which in turn, encapsulates the packet with physical destination address 20 and physical source address 10. The router decapsulates the packet from the frame to read the logical destination address P. Since the logical destination address does not match the router’s logical address, the router knows that the packet needs to be forwarded. The router consults its routing table and ARP to find the physical destination address of the next hop (router 2), creates a new frame, encapsulates the packet, and sends it to router 2. Note the physical addresses in the frame. The source physical address changes from 10 to 99. The destination physical address changes from 20 (router 1 physical address) to 33 (router 2 physical address). The logical source and destination addresses must remain the same; otherwise the packet will be lost. At router 2 we have a similar scenario. The physical addresses are changed, and a new frame is sent to the destination computer. When the frame reaches the destination, the packet is decapsulated. The destination logical address P matches the logical address of the computer. The data are decapsulated from the packet and delivered to the upper layer. Note that although physical addresses will change from hop to hop, logical addresses remain the same from the source to destination.
+> The computer with logical address A and physical address 10 needs to send a packet to the computer with logical address P and physical address 95. 
+
+> The sender encapsulates its data in a packet at the network layer and adds two logical addresses (A and P). The network layer, however, needs to find the physical address of the next hop before the packet can be delivered.
+ 
+> The network layer consults its routing table and finds the logical address of the next hop (router 1) to be F.
+ 
+> Another protocol, Address Resolution Protocol (ARP) finds the physical address of router 1 (20) that corresponds to its logical address(F). Now the network layer passes this address to the data link layer, which in turn, encapsulates the packet with physical destination address 20 and physical source address 10. 
+
+> Router 1 decapsulates the packet from the frame to read the logical destination address P. Since the logical destination address(P) does not match the router’s logical address(F), the router knows that the packet needs to be forwarded. 
+
+> The router consults its routing table and ARP to find the physical destination address of the next hop (router 2), creates a new frame, encapsulates the packet, and sends it to router 2.
+
+> Note the physical addresses in the frame. The source physical address changes from 10 to 99. The destination physical address changes from 20 (router 1 physical address) to 33 (router 2 physical address).
+ 
+> The logical source and destination addresses must remain the same; otherwise the packet will be lost. At router 2 we have a similar scenario. The physical addresses are changed, and a new frame is sent to the destination computer. 
+
+> When the frame reaches the destination, the packet is decapsulated. The destination logical address P matches the logical address of the computer. 
+
+> The data are decapsulated from the packet and delivered to the upper layer. Note that although physical addresses will change from hop to hop, logical addresses remain the same from the source to destination.
+
 
 ![hrllo2](https://user-images.githubusercontent.com/59027621/148687740-748b8f06-7aa0-4351-b2d5-153939fb9289.jpg)
 
-
-
 To show that data from process a needs to be delivered to process j, and not k, the transport layer encapsulates data from the application layer in a packet and adds two port addresses (a and j), source and destination. The packet from the transport layer is then encapsulated in another packet at the network layer with logical source and destination addresses (A and P). Finally, this packet is encapsulated in a frame with the physical source and destination addresses of the next hop. We have not shown the physical addresses because they change from hop to hop inside the cloud designated as the Internet. Note that although physical addresses change from hop to hop, logical and port addresses remain the same from the source to destination. 
+
 
 A port address is a 16-bit address represented by one decimal number as shown.753—A port address is a 16-bit address represented by one decimal number as shown.
 
