@@ -11,12 +11,26 @@ The information exchange process occurs between peer OSI layers. Each layer in t
 ![information exchange process2](https://user-images.githubusercontent.com/59027621/148686980-b9c8bc3b-8835-4abd-b954-29409bded698.gif)
 
 
-<p>
-If System A has data from a software application to send to System B, the data is passed to the application layer. The application layer in System A then adds any control information required by the application layer in System B by prepending a header to the data. The resulting information unit (a header and the data) is passed to the presentation layer, which pretends its own header containing control information intended for the presentation layer in System B. The information unit grows in size as each layer prepends its own header (and in some cases a trailer) that contains control information to be used by its peer layer in System B. At the physical layer, the entire information unit is placed onto the network medium.
-</p>
-<p>
-The physical layer in System B receives the information unit and passes it to the data-link layer. The data link layer in System B then reads the control information contained in the header prepended by the data link layer in System A. The header is then removed, and the remainder of the information unit is passed to the network layer. Each layer performs the same actions: The layer reads the header from its peer layer, strips it off, and passes the remaining information unit to the next highest layer. After the application layer performs these actions, the data is passed to the recipient software application in System B, in exactly the form in which it was transmitted by the application in System A.
-</p>
+> System A has data from a software application to send to System B.
+
+> the data is passed to the application layer. 
+
+> The application layer in System A then adds any control information required by the peer layer in system B/ application layer in System B by prepending a header to the data. 
+
+> The resulting information unit (a header and the data) is passed to the presentation layer, which prepends its own header containing control information intended for the presentation layer in System B. 
+
+> The information unit grows in size as each layer prepends its own header (and in some cases a trailer) that contains control information to be used by its peer layer in System B. 
+
+>  At the physical layer, the entire information unit is placed onto the network medium.
+
+> The physical layer in System B receives the information unit and passes it to the data-link layer. The data link layer in System B then reads the control information contained in the header prepended by the data link layer in System A. The header is then removed, and the remainder of the information unit is passed to the network layer.
+
+>  Each layer performs the same actions: 
+- The layer reads the header from its peer layer 
+- strips it off
+- passes the remaining information unit to the next highest layer. 
+
+> After the application layer performs these actions, the data is passed to the recipient software application in System B, in exactly the form in which it was transmitted by the application in System A.
 
 | **Layer Name**                                               | **Work**                                                     |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
