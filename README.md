@@ -112,12 +112,7 @@ A port address is a 16-bit address represented by one decimal number as shown.75
 Service primitives :
 Lcrsd
 
-
-
-
 ![service primitives](https://user-images.githubusercontent.com/59027621/148687797-1bcb2115-adbc-4701-ab34-b218798591ee.jpg)
-
-![all layers](https://user-images.githubusercontent.com/59027621/148687958-92935135-abbb-4524-8bd0-fe0fdf8ab789.jpg)
 
 
 
